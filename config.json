@@ -1,5 +1,5 @@
 {
-  "devMode": "false",
+  "devMode": "true",
   "locations":[
     { "country":  "south korea", "geoName": "South Korea", "cities": ["seoul", "busan", "incheon", "daegu", "ulsan", "daejeon"], "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_South_Korea.svg" },
   ]
