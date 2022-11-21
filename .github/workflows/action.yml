@@ -1,17 +1,17 @@
 name: Top GitHub Users
 on:
   schedule:
-    - cron: '0 * * * *'
+    - cron: '0 0 * * *'
   workflow_dispatch:
 jobs:
   release:
     name: GitHub Active Users
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@master
         with:
-          ref: ${{ github.head_ref }}
-          token: ${{ secrets.CUSTOM_TOKEN }}
+          persist-credentials: false
+          fetch-depth: 0
       - uses: actions/setup-node@v2.1.5
         with:
           node-version: 14.17.0
