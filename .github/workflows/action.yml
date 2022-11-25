@@ -18,3 +18,12 @@ jobs:
       - uses: gayanvoice/top-github-users-action@master
         env:
           CUSTOM_TOKEN: ${{ secrets.CUSTOM_TOKEN }}
+      - name: Set date in environment variable
+        run: echo "DATE=$(date +'%Y-%m-%dT%H:%M:%SZ')" >> $GITHUB_ENV
+      - name: Commit & Push changes
+        uses: Andro999b/push@patch-1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
+          message: >
+            🎉 chore: update ranking ${{ env.DATE }}
